@@ -3,5 +3,5 @@ build
 .idea
 test-report
 .DS_Store
-/out/
 /allure-results/
+/out/
