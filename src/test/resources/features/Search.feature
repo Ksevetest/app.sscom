@@ -1,5 +1,5 @@
 # @AndroidTest @testApp
-Feature: Testing product searching
+  Feature: Testing product searching
 
   @AndroidTest @testApp
   Scenario: ss.com car search with empty board
