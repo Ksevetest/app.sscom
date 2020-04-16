@@ -1,1 +1,0 @@
-{"uuid":"9884d1b7-f274-4ccb-887d-7f73fe2a931d","name":"Scenario: ss.com search test","children":["2b8a37d3-e1d4-4f74-8986-d6a7283eeb68"],"befores":[{"name":"Hooks.startApp()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1586870592446,"stop":1586870623895}],"afters":[],"links":[],"start":1586870592444,"stop":1586870623903}

@@ -1,1 +1,0 @@
-{"uuid":"ca6cbd1d-82a9-4dbc-8283-0fb721667df7","name":"Scenario: ss.com search test","children":["29b23f6f-2fb1-4007-9912-57652ceebe0f"],"befores":[{"name":"MyStepdefs.appSetup()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1586803170904,"stop":1586803170912}],"afters":[],"links":[],"start":1586803170901,"stop":1586803170930}

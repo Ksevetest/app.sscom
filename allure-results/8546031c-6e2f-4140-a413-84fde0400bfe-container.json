@@ -1,1 +1,0 @@
-{"uuid":"8546031c-6e2f-4140-a413-84fde0400bfe","name":"Scenario: ss.com search test","children":["89ec4048-e219-47dd-a4b9-a3b0c65c8da3"],"befores":[{"name":"Hooks.startMobileWeb()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1586871382155,"stop":1586871401575}],"afters":[],"links":[],"start":1586871382154,"stop":1586871401576}

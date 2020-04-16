@@ -14,7 +14,7 @@ public class AppStepDefs {
 
 
     @Given("client opens ss.com application")
-    public void clientOpensSsComApplication() throws InterruptedException {
+    public void clientOpensSsComApplication() {
         System.out.println("App launched");
         app.acceptCookies();
     }
