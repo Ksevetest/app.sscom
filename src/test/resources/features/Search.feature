@@ -1,7 +1,7 @@
-# @AndroidTest @testApp
+# @testApp
 Feature: Testing product searching
 
-  @AndroidTest @testApp
+  @AndroidTest
   Scenario: ss.com car search
 
     Given client opens ss.com application
@@ -9,7 +9,7 @@ Feature: Testing product searching
     And client sets up car filter
     Then client sees search results
 
-  @AndroidTest @testApp
+  @AndroidTest
   Scenario: ss.com failed car search test
 
     Given client opens ss.com application
@@ -17,7 +17,7 @@ Feature: Testing product searching
     And client sets up car filter with minimal price
     Then client sees board with no results
 
-  @AndroidTest @testApp
+  @AndroidTest
   Scenario: ss.com language change
 
     Given client opens ss.com application

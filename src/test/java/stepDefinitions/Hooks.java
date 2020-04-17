@@ -14,29 +14,18 @@ import static testUI.elements.TestUI.takeScreenshotsAllure;
 
 public class Hooks {
 
-    @Before("@testApp")
+    @Before()
     public void startApp() {
         Configuration.automationType = Configuration.ANDROID_PLATFORM;
         Configuration.androidAppPath = "/Users/vulros/Downloads/sscom.apk";
-        addMobileDesiredCapabilities.setCapability("fullReset",  false);
+        addMobileDesiredCapabilities.setCapability("fullReset", false);
         setScreenshotTaken(true);
         takeScreenshotsAllure();
         open();
     }
 
-    @After("@testApp")
+    @After()
     public void stopApp() {
         stop();
-    }
-
-    @Before("@testMobileWeb")
-    public void startMobileWeb() {
-        Configuration.automationType = Configuration.ANDROID_PLATFORM;
-        open("https://m.ss.com/");
-    }
-
-    @After("@testMobileWeb")
-    public void stopMobileWeb() {
-        close();
     }
 }
