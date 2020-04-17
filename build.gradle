@@ -19,10 +19,7 @@ dependencies {
     testCompile group: 'io.cucumber', name: 'cucumber-core', version:  '4.8.0'
     testCompile group: 'io.cucumber', name: 'cucumber-java', version:  '4.8.0'
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version:  '4.8.0'
-    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.14.0'
 
     implementation 'com.github.testdevlab:TestUI:master-SNAPSHOT'
     implementation 'org.testng:testng:6.9.6'
-
-
 }

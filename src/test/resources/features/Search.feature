@@ -1,28 +1,40 @@
 # @AndroidTest @testApp
-  Feature: Testing product searching
+Feature: Testing product searching
 
   @AndroidTest @testApp
-  Scenario: ss.com car search with empty board
+  Scenario: ss.com car search
 
     Given client opens ss.com application
-    When client chooses car model
+    When client chooses Volvo car model
     And client sets up car filter
-    Then client sees board with no results
+    Then client sees search results
 
   @AndroidTest @testApp
   Scenario: ss.com failed car search test
 
     Given client opens ss.com application
-    When client chooses car model
+    When client chooses Volvo car model
     And client sets up car filter with minimal price
     Then client sees board with no results
 
   @AndroidTest @testApp
+  Scenario: ss.com language change
+
+    Given client opens ss.com application
+    When client opens settings
+    Then client chooses Русский language
+
   Scenario: ss.com car search with output
 
     Given client opens ss.com application
-    When client chooses car model
+    When client chooses Volvo car model
     And client sets up car filter with minimal price
     Then client sees search results
 
+  Scenario: ss.com car search with empty board
+
+    Given client opens ss.com application
+    When client chooses Volvo car model
+    And client sets up car filter
+    Then client sees board with no results
 
