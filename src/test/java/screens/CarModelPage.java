@@ -2,8 +2,7 @@ package screens;
 
 import testUI.elements.UIElement;
 
-import static testUI.elements.TestUI.Ex;
-import static testUI.elements.TestUI.takeScreenshotsAllure;
+import static testUI.elements.TestUI.*;
 
 public class CarModelPage {
 
@@ -16,6 +15,5 @@ public class CarModelPage {
                 .scrollTo()
                 .customSwipeUp(550, 4);
         volvoXC.click();
-        takeScreenshotsAllure();
     }
 }

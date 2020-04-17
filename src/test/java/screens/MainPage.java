@@ -3,7 +3,6 @@ package screens;
 import testUI.elements.UIElement;
 
 import static testUI.elements.TestUI.*;
-import static testUI.elements.TestUI.takeScreenshotsAllure;
 
 public class MainPage {
     UIElement permissions = E("className", "android.widget.Button"),
@@ -16,6 +15,5 @@ public class MainPage {
 
     public void chooseFilterType() {
         transports.click();
-        takeScreenshotsAllure();
-    }
+            }
 }

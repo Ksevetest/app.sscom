@@ -20,6 +20,5 @@ public class Settings {
         languageOption.shouldBe().visible().click();
         Ex("//android.widget.CheckedTextView[contains(@text,'" + language + "')]").shouldBe().visible().click();
         ruTextValidation.shouldHave().containText("Язык");
-        takeScreenshotsAllure();
     }
 }

@@ -2,8 +2,7 @@ package screens;
 
 import testUI.elements.UIElement;
 
-import static testUI.elements.TestUI.Ex;
-import static testUI.elements.TestUI.takeScreenshotsAllure;
+import static testUI.elements.TestUI.*;
 
 public class ResultPage {
 
@@ -15,11 +14,9 @@ public class ResultPage {
                 .untilIsVisible()
                 .shouldHave()
                 .containText("Sludinājumi dotajā kategorijā nav atrasti");
-        takeScreenshotsAllure();
     }
 
     public void searchOutputValidation() {
         outputCheck.waitFor(2).untilIsVisible();
-        takeScreenshotsAllure();
     }
 }
