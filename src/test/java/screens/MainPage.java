@@ -15,5 +15,5 @@ public class MainPage {
 
     public void chooseFilterType() {
         transports.click();
-            }
+    }
 }

@@ -47,7 +47,7 @@ public class AppStepDefs {
 
     @And("client sets up car filter with minimal price")
     public void carFilterWithMinimalPrice() {
-       filterPage.minimalPrice();
+        filterPage.minimalPrice();
     }
 
     @Then("client sees board with no results")

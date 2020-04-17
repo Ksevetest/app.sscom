@@ -46,7 +46,7 @@ public class FilterPage {
         transmissionType.click();
     }
 
-    public  void confirmSearch (){
+    public void confirmSearch() {
         searchResults.scrollTo().customSwipeUp(500, 1);
         searchResults.click();
     }

@@ -5,7 +5,6 @@ import testUI.elements.UIElement;
 import static testUI.elements.TestUI.*;
 
 
-
 public class CarPage {
 
     UIElement cars = Ex("//android.view.View[@resource-id='main']/android.view.View[1]"),
@@ -17,6 +16,6 @@ public class CarPage {
                 .visible()
                 .scrollTo()
                 .customSwipeUp(550, 4);
-        Ex("//android.view.View[contains(@text,'" + car +"')]").click();
+        Ex("//android.view.View[contains(@text,'" + car + "')]").click();
     }
 }
