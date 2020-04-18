@@ -26,7 +26,6 @@ public class Hooks {
     @After()
     public void stopApp(Scenario scenario) {
         takeScreenshotAfterFailure(scenario);
-        stop();
     }
 
     @Attachment
