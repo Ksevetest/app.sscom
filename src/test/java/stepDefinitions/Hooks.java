@@ -4,10 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import testUI.Configuration;
 
-
-import static com.codeborne.selenide.Selenide.close;
 import static testUI.Configuration.addMobileDesiredCapabilities;
-import static testUI.Configuration.driver;
 import static testUI.TestUIServer.stop;
 import static testUI.UIOpen.open;
 import static testUI.elements.TestUI.setScreenshotTaken;
