@@ -29,9 +29,9 @@ pipeline {
           properties: [],
           reportBuildPolicy: 'ALWAYS',
           results: [[path: 'allure-results']]
-          cleanWs()
         ])
       }
+      deleteDir()
     }
   }
 }
