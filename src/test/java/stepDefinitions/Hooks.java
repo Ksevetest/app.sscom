@@ -28,8 +28,10 @@ public class Hooks {
             byte[] screenshot = takeScreenshot();
             Allure.getLifecycle()
                     .addAttachment(
-                            "Screenshot", "image/png", "png", screenshot);
-            scenario.embed(screenshot, "image/png");
+                            "Screenshot",
+                            "image/png",
+                            "png",
+                            screenshot);
         }
         stop();
     }
