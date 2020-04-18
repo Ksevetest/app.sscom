@@ -1,14 +1,16 @@
 package stepDefinitions;
 
+import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.qameta.allure.Allure;
 import testUI.Configuration;
 
-import static testUI.Configuration.addMobileDesiredCapabilities;
+import static testUI.Configuration.*;
+import static testUI.TestUIDriver.takeScreenshot;
 import static testUI.TestUIServer.stop;
 import static testUI.UIOpen.open;
-import static testUI.elements.TestUI.setScreenshotTaken;
-import static testUI.elements.TestUI.takeScreenshotsAllure;
+
 
 public class Hooks {
 
@@ -17,13 +19,18 @@ public class Hooks {
         Configuration.automationType = Configuration.ANDROID_PLATFORM;
         Configuration.androidAppPath = "/Users/vulros/Downloads/sscom.apk";
         addMobileDesiredCapabilities.setCapability("fullReset", false);
-        setScreenshotTaken(true);
-        takeScreenshotsAllure();
         open();
     }
 
-    @After()
-    public void stopApp() {
+    @After() // RETURNS SCREENSHOT IN BYTE TYPE
+    public void takeScreenshotAfterFailure(Scenario scenario) {
+        if (scenario.isFailed()) {
+            byte[] screenshot = takeScreenshot();
+            Allure.getLifecycle()
+                    .addAttachment(
+                            "Screenshot", "image/png", "png", screenshot);
+            scenario.embed(screenshot, "image/png");
+        }
         stop();
     }
 }
