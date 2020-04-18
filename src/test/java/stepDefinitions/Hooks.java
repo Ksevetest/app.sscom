@@ -4,6 +4,7 @@ import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 import testUI.Configuration;
 
 import static testUI.Configuration.*;
@@ -22,7 +23,13 @@ public class Hooks {
         open();
     }
 
-    @After() // RETURNS SCREENSHOT IN BYTE TYPE
+    @After()
+    public void stopApp(Scenario scenario) {
+        takeScreenshotAfterFailure(scenario);
+        stop();
+    }
+
+    @Attachment
     public void takeScreenshotAfterFailure(Scenario scenario) {
         if (scenario.isFailed()) {
             byte[] screenshot = takeScreenshot();
@@ -33,6 +40,4 @@ public class Hooks {
                             "png",
                             screenshot);
         }
-        stop();
-    }
-}
+}}
