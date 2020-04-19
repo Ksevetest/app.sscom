@@ -10,10 +10,10 @@ public class ResultPage {
             outputCheck = Ex("//android.widget.GridView/android.view.View[1]");
 
     public void emptyBoardValidation() {
-        emptyDesc
-//                .untilIsVisible()
+        emptyDesc.waitFor(2)
+                .untilIsVisible()
                 .shouldHave()
-                .containText("Sludinājumi dotajā kategorijā nav atrasti");
+                .exactText("Sludinājumi dotajā kategorijā nav atrasti");
     }
 
     public void searchOutputValidation() {
