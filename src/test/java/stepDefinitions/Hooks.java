@@ -18,7 +18,7 @@ public class Hooks {
     @Before()
     public void startApp() {
         Configuration.automationType = Configuration.ANDROID_PLATFORM;
-        Configuration.androidAppPath = "/Users/vulros/Downloads/sscom.apk";
+        Configuration.androidAppPath = "src/test/resources/sscom.apk";
         addMobileDesiredCapabilities.setCapability("fullReset", false);
         open();
     }
